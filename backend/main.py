@@ -13,10 +13,8 @@ app.add_middleware(
 )
 
 @app.get("/api/")
-@app.get("/api")
 def root():
     return {
-        "equipo": "TeamScene",
         "proyecto": "BookStage",
-        "descripcion": "Bienvenido a BookStage: Tu herramienta para facilitarte la vida teatral."
+        "descripcion": "Tu herramienta para facilitarte la vida teatral"
     }
