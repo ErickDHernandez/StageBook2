@@ -1,5 +1,6 @@
 // src/components/Logo.tsx
-interface LogoProps {
+import React from "react";
+interface LogoProps extends React.HTMLAttributes<HTMLImageElement>{
   width?: number;
 }
 
@@ -12,7 +13,7 @@ export default function Logo({ width = 200 }: LogoProps) {
         width: `${width}px`,
         maxWidth: "50%",
         height: "auto",
-        marginBottom: "40px",
+        marginBottom: "0px",
       }}
     />
   );

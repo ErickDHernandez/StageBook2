@@ -24,7 +24,7 @@ export default function Button({
         color: textColor,
         cursor: "pointer",
         transition: "background-color 0.3s",
-        border: "3px solid black",
+        border: "2px solid black",
       }}
       onMouseOver={(e) => (e.currentTarget.style.backgroundColor = hoverColor)}
       onMouseOut={(e) => (e.currentTarget.style.backgroundColor = bgColor)}

@@ -1,13 +1,15 @@
 html, body, #root {
+  min-height: 100vh;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 #root {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .logo {
@@ -38,10 +40,55 @@ html, body, #root {
   }
 }
 
+
+
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* Home.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;   /* asegura que ocupe toda la pantalla */
+  text-align: center;
+  font-family: "Courier New", monospace;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-title {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;   /* se reduce en tablets */
+  }
+  .home-description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 1.5rem;  /* más pequeño en móviles */
+  }
+  .home-description {
+    font-size: 0.9rem;
+  }
 }

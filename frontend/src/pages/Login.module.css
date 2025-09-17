@@ -1,0 +1,54 @@
+/* src/pages/Login.module.css */
+
+.loginContainer {
+  /* Estilos para centrar el contenido, igual que en Home */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Courier New", monospace;
+}
+
+.loginTitle {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%; /* Ancho del formulario, ajústalo según necesites */
+  max-width: 400px; /* Ancho máximo para pantallas grandes */
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submitButton {
+  padding: 12px;
+  background-color: red; /* O el color que uses en tu Home */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.registerLink {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .loginTitle {
+    font-size: 2rem;
+  }
+}

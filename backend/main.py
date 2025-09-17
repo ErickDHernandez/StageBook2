@@ -16,5 +16,5 @@ app.add_middleware(
 def root():
     return {
         "proyecto": "BookStage",
-        "descripcion": "Tu herramienta para facilitarte la vida teatral"
+        "descripcion": "Artistic Planner & Portfolio"
     }
