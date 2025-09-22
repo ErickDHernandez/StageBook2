@@ -4,7 +4,7 @@ import App from './App.tsx'
 import "./index.css"; // Esto es el impor del Tailwind
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+ // <React.StrictMode>
     <App />
-  </React.StrictMode>
+  //</React.StrictMode>
 );

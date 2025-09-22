@@ -16,22 +16,29 @@ export default function Home() {
   const [data, setData] = useState<ApiData | null>(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/")
-      .then(res => res.json())
-      .then(info => setData(info))
-      .catch(err => console.error("Error API:", err));
-  }, []);
-
+useEffect(() => {
+  fetch("http://127.0.0.1:8000/api/")
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('La respuesta de la red no fue correcta');
+      }
+      return res.json();
+    })
+    .then(info => {
+      console.log("Datos recibidos de la API:", info);
+      setData(info);
+    })
+    .catch(err => {
+      console.error("Error al obtener los datos de la API:", err);
+    });
+}, []);
   return (
     <>
       <div className= {styles.homeContainer}> 
         <Logo width={200} className={styles.logoimg}></Logo> 
-        <h1 className= {styles.mainTitle}>{data?.proyecto || "Cargando..."}</h1>
+        <h1 style={{color: "Black"}} className= {styles.mainTitle}>{data?.proyecto || "Cargando..."}</h1>
         <p className={styles.description}>
-          <div className={styles.typewriterContainer}>
-            {data ? <Typewriter text={data.descripcion} speed={50} /> : "Cargando..."}
-          </div> 
+            {data ? <Typewriter text={data.descripcion} speed={50} color ="black"/> : "Cargando..."}
         </p>
 
         <div className={styles.buttonContainer}>

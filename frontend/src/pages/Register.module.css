@@ -1,4 +1,4 @@
-.loginContainer {
+.registerContainer {
   /* Estilos para centrar el contenido, igual que en Home */
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
 
 }
 
-.loginTitle {
+.registerTitle {
   font-size: 3rem;
   margin: 20px 0;
 }
@@ -43,7 +43,7 @@
   cursor: pointer;
 }
 
-.registerLink {
+.loginLink {
   margin-top: 20px;
 }
 

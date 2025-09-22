@@ -9,6 +9,8 @@
   font-family: "Courier New", monospace;
   padding: 0 20px;
   box-sizing: border-box;
+  background-color: white;
+
 }
 
 .buttonContainer{
@@ -27,7 +29,7 @@
   font-size: 1.2rem;
   max-width: 800px;
   margin-bottom: 40px;
-  text-align: center; /* Se mantiene aquí, ya que es parte del estilo base */
+  text-align: center; 
 }
 
 /* Media Query para pantallas pequeñas (móviles) */
@@ -45,7 +47,6 @@
     margin: 10px 0;
   }
 
-  /* Solo necesitas cambiar las propiedades que varían en móvil */
   .description {
     font-size: 1rem;
     margin-bottom: 20px;
