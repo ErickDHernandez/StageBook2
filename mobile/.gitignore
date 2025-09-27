@@ -44,3 +44,6 @@ app-example
 
 #Llave
 admin_key.json
+
+#eliminar usuarios anonimos
+delete_anonymous_users.cjs
