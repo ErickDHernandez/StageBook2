@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css"; 
-import Typewriter from "../components/Typewriter";
-import Logo from "../components/Logo";
+import Typewriter from "../../components/Typewriter";
+import Logo from "../../components/Logo";
 
 interface ApiData{
   proyecto:string;
@@ -12,6 +12,7 @@ function Login() {
   const [correo, setCorreo] = useState("");
   const [contrasena, setContrasena] = useState("");
   const [data, setData] =useState<ApiData | null >(null);
+  const navigate =useNavigate();
 
   //Este trae el titulo del Backend
     useEffect(() => {
@@ -33,6 +34,10 @@ function Login() {
 
     const result = await response.json();
     alert(result.mensaje);
+    
+    if (response.ok) {
+      navigate ("/dashboard");
+    }
   };
 
   return (

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../components/Logo";
-import Typewriter from "../components/Typewriter";
-import Button from "../components/Button";
+import Logo from "../../components/Logo";
+import Typewriter from "../../components/Typewriter";
+import Button from "../../components/Button";
 import styles from "./Home.module.css";
 
 interface ApiData {

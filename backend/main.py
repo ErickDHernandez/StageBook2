@@ -2,13 +2,19 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import psycopg2
+from passlib.context import CryptContext
 
 app = FastAPI()
 
 # Configuración CORS para que React pueda llamar a la API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # React se ejecutará en este puerto
+    allow_origins=["http://localhost:5173"
+                    "http://127.0.0.1:8000",       
+                    "http://192.168.56.1",     
+                    "exp://[DIRECCION-DE-EXPO]" 
+    ],
+    
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -23,6 +29,15 @@ conn = psycopg2.connect(
     port = "5432"
 
 )
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated = "auto")
+def hash_password (password:str) -> str:
+    """Hashea una contraseña."""
+    return pwd_context.hash(password)
+
+
+def verify_password(plain_password: str, hashed_password: str) -> bool:
+    """Verifica una contraseña hasheada."""
+    return pwd_context.verify(plain_password, hashed_password)
 
 #Modelo de usuario
 class Usuario(BaseModel):

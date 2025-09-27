@@ -1,0 +1,49 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  background-color: white;
+}
+
+.dashboardTitle {
+  font-size: 2.5rem;
+  margin: 20px 0 40px 0;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.navButton {
+  padding: 14px;
+  background-color: red; /* mismo color que en login */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 600px) {
+  .dashboardTitle {
+    font-size: 2rem;
+  }
+  .navButton {
+    font-size: 1rem;
+  }
+}

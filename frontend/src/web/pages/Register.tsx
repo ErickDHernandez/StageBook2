@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Register.module.css";
-import Logo from "../components/Logo";
-import Typewriter from "../components/Typewriter";
+import Logo from "../../components/Logo";
+import Typewriter from "../../components/Typewriter";
 
 interface ApiData {
   proyecto: string;
